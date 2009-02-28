@@ -88,7 +88,7 @@ class clsStandAloneModule{
 
 $SAmodsArray = array();
 //include ($site_root . './define/modules/mod_subscribe.php');
-//include ($site_root . './define/modules/mod_statbaners.php');
+include ($site_root . './define/modules/mod_statbaners.php');
 //include ($site_root . './define/modules/mod_auth.php');
 include ($site_root . './define/modules/mod_contacts.php');
 include ($site_root . './define/modules/mod_counter.php');
@@ -101,8 +101,10 @@ include ($site_root . './define/modules/mod_redir.php');
 include ($site_root . './define/modules/mod_sitemap.php');
 include ($site_root . './define/modules/mod_articles.php');
 include ($site_root . './define/modules/mod_gb.php');
+include ($site_root . './define/modules/mod_forms.php');
+include ($site_root . './define/modules/mod_planeta.php');
 include ($site_root . './define/modules/mod_gallery.php');
-//include ($site_root . './define/modules/mod_votes.php');
+include ($site_root . './define/modules/mod_votes.php');
 include ($site_root . './define/modules/mod_subnodes.php');
-//include ($site_root . './define/modules/mod_invest.php');
+include ($site_root . './define/modules/mod_invest.php');
 ?>

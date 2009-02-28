@@ -27,7 +27,7 @@
 </form>
 <?php echo drwTableEnd() ?>
 <tr><td align=center valign=bottom height=50>
-<a href="http://delfin.name" target=_blank>Delfin &copy; 2005</a>
+<a href="http://delfin.name" target=_blank>Delfin &copy; 2009</a>
 </td></tr>
 </td></tr></table>
 </body>

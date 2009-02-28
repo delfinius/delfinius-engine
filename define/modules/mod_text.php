@@ -12,7 +12,7 @@ class clsTextModule extends clsModule{
 	    $this->prms["template"]=new ConfigParam("template");
 	    $this->prms["template"]->Description="Шаблон вывода текста. Допускаемые для замены значения: text";
 	    $this->prms["template"]->DataType="memo";
-	    $this->prms["template"]->Value="<table width=100% border=0 cellpadding=0 cellspacing=0><td width=10 valign=top>&nbsp;</td><td width=* valign=top>--text--</td><td width=10 valign=top>&nbsp;</td></tr></table>";
+	    $this->prms["template"]->Value="--text--";
 	    $this->prms["template"]->Protected=false;
 	    
 	    $this->modTable="mod_text";

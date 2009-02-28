@@ -172,7 +172,7 @@ class clsPlanetaAbilityModule extends clsModule{
 			};
 			$retVal.="<tr><td colspan=3 class=colheader align=center>добавить запись</td></tr>";
 			$retVal.="$theFormPrefix<input type=hidden name=actiontarget value=$curactpage><input type=hidden name=id value=" . $row["id"] . "><input type=hidden name=mod_planeta_action value=insert>";
-			$retVal.="<tr><td class=$tdclass><input type=text class=text name=name size=80></td><td colspan=2 align=center><input type=submit class=button value=\"добавить\"></td></tr></form>";
+			$retVal.="<tr><td class=$tdclass><input type=text class=text name=name size=80></td><td colspan=2 align=center class=$tdclass><input type=submit class=button value=\"добавить\"></td></tr></form>";
 		};
 
 		// Редкатирование возможных статусов
@@ -216,7 +216,7 @@ class clsPlanetaAbilityModule extends clsModule{
 			};
 			$retVal.="<tr><td colspan=3 class=colheader align=center>добавить запись</td></tr>";
 			$retVal.="$theFormPrefix<input type=hidden name=actiontarget value=$curactpage><input type=hidden name=id value=" . $row["id"] . "><input type=hidden name=mod_planeta_action value=insert>";
-			$retVal.="<tr><td class=$tdclass><input type=text class=text name=name size=80></td><td colspan=2 align=center><input type=submit class=button value=\"добавить\"></td></tr></form>";
+			$retVal.="<tr><td class=$tdclass><input type=text class=text name=name size=80></td><td colspan=2 align=center class=$tdclass><input type=submit class=button value=\"добавить\"></td></tr></form>";
 		};
 
 		// Редкатирование улиц
@@ -290,7 +290,7 @@ class clsPlanetaAbilityModule extends clsModule{
 				$retVal.="<option value=" . $area["id"] . "$selected>" . CutQuots($area["name"]);
 			};
 			$retVal.="</select></td>";
-			$retVal.="<td colspan=2 align=center><input type=submit class=button value=\"добавить\"></td></tr></form>";
+			$retVal.="<td colspan=2 align=center class=$tdclass><input type=submit class=button value=\"добавить\"></td></tr></form>";
 		};
 		
 		// Редкатирование домов
@@ -383,7 +383,7 @@ class clsPlanetaAbilityModule extends clsModule{
 				$retVal.="<option value=" . $status["id"] . "$selected>" . CutQuots($status["name"]);
 			};
 			$retVal.="</select></td><input type=hidden name=street value=$currentstreet>";
-			$retVal.="<td colspan=2 align=center><input type=submit class=button value=\"добавить\"></td></tr></form>";
+			$retVal.="<td colspan=2 align=center class=$tdclass><input type=submit class=button value=\"добавить\"></td></tr></form>";
 		};
 		
 		$retVal.="</table></td></tr>";
@@ -418,6 +418,7 @@ class clsPlanetaAbilityModule extends clsModule{
 				`id` INT NOT NULL AUTO_INCREMENT ,
 				`street` INT NOT NULL ,
 				`status` INT NOT NULL ,
+				`itvstatus` int(11) NOT NULL default '3',
 				`name` VARCHAR( 50 ) NOT NULL ,
 				PRIMARY KEY ( `id` )
 			);";

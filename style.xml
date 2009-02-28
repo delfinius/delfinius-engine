@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="windows-1251" ?>
+  <Styles >
+    <Style name="Обычный" element="p" />
+    <Style name="Основной абзац" element="p">
+      <Attribute name="class" value="main" />
+    </Style >
+    <Style name="Основной абзац увеличенный" element="p">
+      <Attribute name="class" value="mainbold" />
+    </Style >
+    <Style name="Пустая" element="td">
+      <Attribute name="class" value="empty" />
+    </Style >
+    <Style name="Заголовок" element="td">
+      <Attribute name="class" value="header" />
+    </Style >
+    <Style name="Заголовок колонки" element="td">
+      <Attribute name="class" value="colheader" />
+    </Style >
+    <Style name="Данные 1" element="td">
+      <Attribute name="class" value="data1" />
+    </Style >
+    <Style name="Данные 2" element="td">
+      <Attribute name="class" value="data2" />
+    </Style >
+    <Style name="Бордюр" element="td">
+      <Attribute name="class" value="border" />
+    </Style >
+    <Style name="Основной" element="li">
+      <Attribute name="class" value="main" />
+    </Style >
+    <Style name="Увеличенный" element="li">
+      <Attribute name="class" value="mainbold" />
+    </Style >
+    <Style name="Обычный H1" element="h1" />
+    <Style name="Обычный H2" element="h2" />
+    <Style name="Обычный H3" element="h3" />
+    <Style name="Обычный H4" element="h4" />
+    <Style name="Обычный H5" element="h5" />
+    <Style name="Обычный H6" element="h6" />
+    <Style name="Обычный TEXTAREA" element="textarea" />
+    <Style name="Обычный IMG" element="img" />
+    <Style name="Обычный HR" element="hr" />
+    <Style name="Обычный TABLE" element="table" />
+</Styles>
