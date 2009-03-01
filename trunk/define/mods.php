@@ -107,4 +107,5 @@ include ($site_root . './define/modules/mod_gallery.php');
 include ($site_root . './define/modules/mod_votes.php');
 include ($site_root . './define/modules/mod_subnodes.php');
 include ($site_root . './define/modules/mod_invest.php');
+include ($site_root . './define/modules/mod_employees.php');
 ?>
