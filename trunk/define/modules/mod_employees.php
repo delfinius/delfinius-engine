@@ -589,6 +589,7 @@ class clsEmployeesModule extends clsModule{
 	
 	function Install($reinstall=false){
 		$installsql="DROP TABLE IF EXISTS `$this->itemsTable`;
+			CREATE TABLE IF NOT EXISTS `$this->itemsTable` (
 				  `id` int(11) NOT NULL AUTO_INCREMENT,
 				  `node` int(11) NOT NULL DEFAULT '0',
 				  `name` varchar(250) NOT NULL DEFAULT '',
@@ -612,14 +613,14 @@ class clsEmployeesModule extends clsModule{
 				  PRIMARY KEY (`id`)
 			);
 			DROP TABLE IF EXISTS `$this->groupsTable`;
-			CREATE TABLE IF NOT EXISTS `mod_employees_groups` (
+			CREATE TABLE IF NOT EXISTS `$this->groupsTable` (
 				  `id` int(11) NOT NULL AUTO_INCREMENT,
 				  `name` varchar(250) NOT NULL,
 				  `description` varchar(250) NOT NULL,
 				  PRIMARY KEY (`id`)
 			);
 			DROP TABLE IF EXISTS `$this->officeTable`;
-			CREATE TABLE IF NOT EXISTS `mod_employees_groups` (
+			CREATE TABLE IF NOT EXISTS `$this->officeTable` (
 				  `id` int(11) NOT NULL AUTO_INCREMENT,
 				  `name` varchar(250) NOT NULL,
 				  `description` varchar(250) NOT NULL,
