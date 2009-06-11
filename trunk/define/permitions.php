@@ -54,7 +54,7 @@ function CheckAccess($login,$password){
 	$retval=-1;
 	global $db;
 	global $SessionSettings;
-	$sql="select id, permitions, login, password, email, suppresshelp from moderators where login='" . str_replace("'", "''",$login) . "' and password='" . str_replace("'", "''",md5($password)) . "'";
+	$sql="select id, permitions, login, password, email, suppresshelp from moderators where login='" . $login . "' and password='" . md5($password) . "'";
 	if(!$db->sql_query($sql)){
 //	    $sqlerror = $db->sql_error();
 //	    die($sqlerror['message']);

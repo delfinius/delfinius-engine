@@ -4,7 +4,6 @@
     include ("../define/common.php");
     if($SessionSettings["id"]>0)header("Location: index.php"); 
     if(CheckAccess($HTTP_POST_VARS['UserName'],$HTTP_POST_VARS['Password'])==0){
-//	echo $SessionSettings["id"];
 	header("Location: index.php");
 	exit();
     };
