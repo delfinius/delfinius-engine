@@ -108,4 +108,6 @@ include ($site_root . './define/modules/mod_votes.php');
 include ($site_root . './define/modules/mod_subnodes.php');
 include ($site_root . './define/modules/mod_invest.php');
 include ($site_root . './define/modules/mod_employees.php');
+include ($site_root . './define/modules/mod_ade.php');
+include ($site_root . './define/modules/mod_phorum.php');
 ?>
