@@ -28,20 +28,16 @@ if($db->sql_numrows()>0){
 <meta HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=windows-1251">
 <?php include ('../style.php')?>
 </head>
-<form method="post"><input type="hidden" name="action" value="update"><input type="hidden" name="textID" value="<?php echo $theTextID?>">
+<form method="post" style="margin:0"><input type="hidden" name="action" value="update"><input type="hidden" name="textID" value="<?php echo $theTextID?>">
 <?php
 $oFCKeditor = new FCKeditor('txteditor') ;
 $oFCKeditor->BasePath = '/admin/fckeditor/' ;
 $oFCKeditor->Config["CustomConfigurationsPath"] = "/admin/fckeditor/_config.js";
 $oFCKeditor->ToolbarSet = 'delfinius-engine';
+$oFCKeditor->Height = '100%';
 $oFCKeditor->Value = $textValue ;
 $oFCKeditor->Create() ;
 echo '';
 ?>
 </form>
-<script type="text/javascript">
-function FCKeditor_OnComplete( editorInstance )
-{
-FCKeditorAPI.GetInstance('txteditor').Commands.GetCommand('FitWindow').Execute();
-}
-</script></body></html>
+</body></html>

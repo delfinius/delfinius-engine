@@ -10,6 +10,8 @@ a:active {  text-decoration: underline;}
 a:link {  text-decoration: underline; }
 a:hover {  text-decoration: none;}
 
+a.header {color:white;font-weight:bold;}
+
 td	{font-size:12px;}
 
 

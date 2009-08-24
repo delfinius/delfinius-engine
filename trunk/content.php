@@ -45,6 +45,7 @@
 
 	if($SAmodsArray["counter"])$SAmodsArray["counter"]->WriteLog($node);
 	include("./define/top.php");
+	include("./define/menu.php");
 	if($modsArray[$NodeInfo['type']]){
 		echo $modOutPut[0];
 	};

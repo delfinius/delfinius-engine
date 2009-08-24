@@ -281,7 +281,7 @@ class clsEmployeesModule extends clsModule{
 				$tdclass=($tdclass=="data1")?"data2":"data1";
 			};
 		};
-		$retVal.="<tr><td class=colheader align=center colspan=5><input type=button class=button value=\"добавить новое изображение\" onclick=\"mod_gallery_action('append',$thePage,0)\"></td></tr>";
+		$retVal.="<tr><td class=colheader align=center colspan=5><input type=button class=button value=\"добавить нового сотрудника\" onclick=\"mod_gallery_action('append',$thePage,0)\"></td></tr>";
 		$retVal.=drwTableEnd();
 		$PagerStr='';
 		$lastPage=($counter%$PageSize==0)?0:1;
@@ -374,7 +374,7 @@ class clsEmployeesModule extends clsModule{
 			$retVal.="<tr><td class=data1 colspan=2 align=center><input type=submit class=button value=\"обновить\"></td></tr>";
 			$retVal.="</form>";
 			$retVal.="<form method=post action=post.php enctype=\"multipart/form-data\" name=\"mod_employees_go_form\" target=\"mod_employees_editor\"><input type=hidden name=textID value=\"" . $row["description"] . "\"></form></td></tr>";
-			$retVal.="<script>alert(document.forms['mod_employees_go_form']);document.forms['mod_employees_go_form'].submit();</script>";
+			$retVal.="<script>document.forms['mod_employees_go_form'].submit();</script>";
 		};
 		$retVal.=drwTableEnd();
 		return $retVal;
@@ -604,10 +604,10 @@ class clsEmployeesModule extends clsModule{
 				  `visible` int(11) NOT NULL DEFAULT '0',
 				  `deleted` int(11) NOT NULL DEFAULT '0',
 				  `group` int(11) NOT NULL DEFAULT '0',
-				  `job` varchar(250) NOT NULL,
-				  `c_phone` varchar(100) NOT NULL,
-				  `i_phone` varchar(100) NOT NULL,
-				  `e_phone` varchar(100) NOT NULL,
+				  `job` varchar(250) NOT NULL DEFAULT '',
+				  `c_phone` varchar(100) NOT NULL DEFAULT '',
+				  `i_phone` varchar(100) NOT NULL DEFAULT '',
+				  `e_phone` varchar(100) NOT NULL DEFAULT '',
 				  `office` int(11) NOT NULL DEFAULT '0',
 				  `sort` int(11) NOT NULL DEFAULT '100',
 				  PRIMARY KEY (`id`)
@@ -615,15 +615,15 @@ class clsEmployeesModule extends clsModule{
 			DROP TABLE IF EXISTS `$this->groupsTable`;
 			CREATE TABLE IF NOT EXISTS `$this->groupsTable` (
 				  `id` int(11) NOT NULL AUTO_INCREMENT,
-				  `name` varchar(250) NOT NULL,
-				  `description` varchar(250) NOT NULL,
+				  `name` varchar(250) NOT NULL DEFAULT '',
+				  `description` varchar(250) NOT NULL DEFAULT '',
 				  PRIMARY KEY (`id`)
 			);
 			DROP TABLE IF EXISTS `$this->officeTable`;
 			CREATE TABLE IF NOT EXISTS `$this->officeTable` (
 				  `id` int(11) NOT NULL AUTO_INCREMENT,
-				  `name` varchar(250) NOT NULL,
-				  `description` varchar(250) NOT NULL,
+				  `name` varchar(250) NOT NULL DEFAULT '',
+				  `description` varchar(250) NOT NULL DEFAULT '',
 				  PRIMARY KEY (`id`)
 			);";
 		$splitedinstructions=split(";",$installsql);
@@ -639,7 +639,7 @@ class clsEmployeesModule extends clsModule{
 
 
 
-$theEmployeesModule=new clsEmployeesModule("employees","Сотрудники",$db);
+$theEmployeesModule=new clsEmployeesModule("employees","сотрудники",$db);
 $modsArray["employees"]=$theEmployeesModule;
 
 ?>
