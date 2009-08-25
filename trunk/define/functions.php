@@ -55,7 +55,7 @@ function DatePicker($dpref,$timestamp){
     };
     $retval.='</select>&nbsp;';
     $retval.='<select name="'.$dpref.'year">';
-    for($counter=1975;$counter<=2020;$counter++){
+    for($counter=1937;$counter<=2020;$counter++){
 	$selected=($counter==$dateArray['year'])?' selected':'';
 	$retval.='<option'.$selected . ' value=' . $counter . '>' . $counter;
     };
@@ -123,9 +123,9 @@ function striphtml($srcText){
 	                 "'&nbsp;'si",          // Замена html-сущности пробела на пробел
         	         "'([\r\n])[\s]+'");                // Вырезает пробельные символы
 
-	$replace = array ("",
-        	         "",
-        	         "",
+	$replace = array (" ",
+        	         " ",
+        	         " ",
         	         " ",
 	                 "\\1");
 	$retVal = preg_replace($search, $replace, $srcText);
