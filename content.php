@@ -1,4 +1,5 @@
 <?php
+
 	include("./define/common.php");
 	$node=$HTTP_GET_VARS['id'];
 	if(!is_numeric($node))header("Location: .");
